@@ -1,4 +1,4 @@
-# streamlitTextExtractor
+# StreamlitTextExtractor
 
 Launch the web app:
 
