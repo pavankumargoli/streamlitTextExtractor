@@ -24,14 +24,6 @@ def extract_text_docx(file_path):
         text += para.text + '\n'
     return text
 
-
-# Function to display PDF
-def display_pdf(file_path):
-    images = convert_from_bytes(file_path.read())
-    for img in images:
-        img = Image.open(io.BytesIO(img.tobytes()))
-        st.image(img, width=600)
-
 # Functions for database operations
 def create_database():
     conn = sqlite3.connect('file_texts.db')
@@ -72,7 +64,7 @@ def main():
 
         if file.type == 'application/pdf':
             with st.spinner('Extracting text from PDF...'):
-                display_pdf(file)
+#                 display_pdf(file)
                 file.seek(0)
                 text = extract_text_pdf(file)
                 file_type = 'PDF'
