@@ -1,4 +1,4 @@
-# StreamlitTextExtractor
+# Streamlit TextExtractor - Extract text from PDF and DOCX files and store it in a database
 
 Launch the web app:
 
